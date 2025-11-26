@@ -15,7 +15,7 @@ export const TradingCandlesticks = () => {
   }, []);
 
   return (
-    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-96 pointer-events-none opacity-50 hidden lg:flex items-end justify-center gap-4 px-8">
+    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-96 pointer-events-none opacity-70 hidden lg:flex items-end justify-center gap-4 px-8">
       {candlesticks.map((stick) => (
         <motion.div
           key={stick.id}
