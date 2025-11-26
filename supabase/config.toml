@@ -1,0 +1,7 @@
+project_id = "gcalgkjbdgiqjmiyzhow"
+
+[functions.fetch-market-data]
+verify_jwt = false
+
+[functions.submit-application]
+verify_jwt = false
