@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const Apply = () => {
   useEffect(() => {
-    window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSdSGT_1I65eDMOIj6wZ4VxFuuT4tpyBI7wCOiZvFfxd8FUg1g/viewform?usp=header");
+    window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLScdzvb2SutLHUTOrkDGoQG76iYjizeIELLbvhBi4O0uEHRqzQ/viewform?usp=header");
   }, []);
 
   return (
