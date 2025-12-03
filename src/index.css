@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Navy depths - main background */
+    --background: 230 45% 8%;
+    --foreground: 210 100% 98%;
+
+    /* Card surfaces with subtle elevation */
+    --card: 230 40% 12%;
+    --card-foreground: 210 100% 98%;
+
+    --popover: 230 40% 12%;
+    --popover-foreground: 210 100% 98%;
+
+    /* Royal blue - primary brand */
+    --primary: 220 90% 56%;
+    --primary-foreground: 210 100% 98%;
+
+    /* Cyan - secondary/accent energy */
+    --secondary: 185 84% 50%;
+    --secondary-foreground: 230 45% 8%;
+
+    /* Purple - mystical depth */
+    --purple: 270 70% 60%;
+    --purple-dark: 270 60% 40%;
+    --purple-light: 280 80% 70%;
+
+    /* Muted navy tones */
+    --muted: 230 35% 15%;
+    --muted-foreground: 210 20% 70%;
+
+    /* Gold accent for prestige */
+    --accent: 45 100% 60%;
+    --accent-foreground: 230 45% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 100% 98%;
+
+    --border: 230 30% 20%;
+    --input: 230 30% 18%;
+    --ring: 220 90% 56%;
+
+    --radius: 0.75rem;
+
+    /* Gradients for depth and flow */
+    --gradient-primary: linear-gradient(135deg, hsl(230 45% 8%) 0%, hsl(270 50% 20%) 50%, hsl(230 45% 8%) 100%);
+    --gradient-hero: linear-gradient(to bottom, hsl(230 45% 8% / 0.6), hsl(230 45% 8%));
+    --gradient-cyan: linear-gradient(135deg, hsl(220 90% 56%), hsl(185 84% 50%));
+    --gradient-purple: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 70%));
+    --gradient-purple-cyan: linear-gradient(135deg, hsl(270 70% 60%), hsl(185 84% 50%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(185 84% 50% / 0.15), transparent 70%);
+
+    /* Glow effects for 3D elements */
+    --glow-cyan: 0 0 40px hsl(185 84% 50% / 0.4), 0 0 80px hsl(185 84% 50% / 0.2);
+    --glow-blue: 0 0 40px hsl(220 90% 56% / 0.4), 0 0 80px hsl(220 90% 56% / 0.2);
+    --glow-purple: 0 0 40px hsl(270 70% 60% / 0.4), 0 0 80px hsl(270 70% 60% / 0.2);
+    --glow-gold: 0 0 40px hsl(45 100% 60% / 0.4), 0 0 80px hsl(45 100% 60% / 0.2);
+
+    /* Shadows with color tint */
+    --shadow-elevation: 0 10px 40px hsl(230 45% 4% / 0.5);
+    --shadow-glow-cyan: 0 0 30px hsl(185 84% 50% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom animations for trading elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes candlestick-grow {
+  0% { transform: scaleY(0.7); opacity: 0.6; }
+  50% { transform: scaleY(1.1); opacity: 1; }
+  100% { transform: scaleY(0.9); opacity: 0.8; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-candlestick {
+    animation: candlestick-grow 2s ease-in-out infinite;
+  }
+
+  .gradient-animated {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, hsl(220 90% 56%), hsl(185 84% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(45 100% 70%), hsl(45 100% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-blue {
+    box-shadow: var(--glow-blue);
+  }
+
+  .glow-gold {
+    box-shadow: var(--glow-gold);
+  }
+
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+
+  .text-gradient-purple {
+    background: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-purple {
+    background: linear-gradient(135deg, hsl(270 70% 60%), hsl(280 80% 70%));
+  }
+
+  .bg-gradient-purple-cyan {
+    background: linear-gradient(135deg, hsl(270 70% 60%), hsl(185 84% 50%));
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+
+  .drop-shadow-glow {
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite;
+  }
+}
