@@ -263,7 +263,7 @@ const teamMembers = [{
             <Card className="p-8 bg-card border-border">
               <h3 className="text-2xl font-bold mb-6">Visit Us</h3>
               <div className="w-full h-64 rounded-lg overflow-hidden border border-border">
-                <iframe src="https://www.google.com/maps/place/Ivy+Biophilic+Workspace/@10.9616593,76.5113129,18.01z/data=!4m6!3m5!1s0x3ba87f0033c09661:0x272a0042436dbefb!8m2!3d10.9623483!4d76.511485!16s%2Fg%2F11v_8gy7kn?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" width="100%" height="100%" style={{
+                <iframe src="https://maps.app.goo.gl/cQjMWmZb6ZFrJSxV7" width="100%" height="100%" style={{
                 border: 0
               }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Bluemantle Institute Location" />
               </div>
