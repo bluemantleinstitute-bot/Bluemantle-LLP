@@ -1,0 +1,235 @@
+/* Share Button - Adapted from Uiverse.io by Mohammad-Rahme-576 */
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  overflow: visible;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--purple)));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:
+    background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.3s ease,
+    box-shadow 0.4s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  animation: share-pulse 3s infinite;
+}
+
+.button-content::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+
+.button-content:hover::after {
+  transform: scale(1);
+}
+
+.button-content:hover {
+  background: linear-gradient(135deg, hsl(var(--purple)), hsl(var(--primary)));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.button-content:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button-content .text {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 10px;
+  white-space: nowrap;
+  transition: letter-spacing 0.3s ease;
+  color: white;
+  opacity: 1;
+  position: static;
+  background: none;
+  box-shadow: none;
+  z-index: auto;
+  transform: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.button-content:hover .text {
+  letter-spacing: 1px;
+  transform: none;
+}
+
+.share-icon {
+  fill: white;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), fill 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.button-content:hover .share-icon {
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* Tooltip */
+.tooltip-content {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    visibility 0.5s ease;
+  z-index: 100;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  min-width: 220px;
+}
+
+.tooltip-container:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: hsl(var(--card)) transparent transparent transparent;
+}
+
+/* Copy Link Button */
+.copy-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 12px;
+}
+
+.copy-link-btn:hover {
+  background: hsl(var(--accent));
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: hsl(var(--muted));
+  transition:
+    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    background 0.3s ease,
+    box-shadow 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: hsl(var(--muted-foreground));
+  transition:
+    transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    fill 0.3s ease;
+  z-index: 1;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+  fill: white;
+}
+
+.social-icon.instagram:hover {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icon.youtube:hover {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.social-icon.linkedin:hover {
+  background: linear-gradient(135deg, #0077b5, #005e94);
+}
+
+.social-icon.whatsapp:hover {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+@keyframes share-pulse {
+  0% { box-shadow: 0 0 0 0 hsla(var(--primary), 0.4); }
+  70% { box-shadow: 0 0 0 15px hsla(var(--primary), 0); }
+  100% { box-shadow: 0 0 0 0 hsla(var(--primary), 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-content,
+  .share-icon,
+  .social-icon,
+  .tooltip-content {
+    transition: none;
+  }
+  .button-content {
+    animation: none;
+  }
+}
