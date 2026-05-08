@@ -4,6 +4,9 @@
 
 **URL**: https://lovable.dev/projects/cffb0aae-fd6f-42d1-a833-7175aa01ba41
 
+## Deployment
+Build configuration updated with vercel.json for proper output directory handling.
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
