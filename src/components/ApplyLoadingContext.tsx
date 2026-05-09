@@ -36,7 +36,7 @@ export const ApplyLoadingProvider: React.FC<{ children: React.ReactNode }> = ({ 
     const startTransition = useCallback((to: string) => {
         setIsLoading(true);
 
-        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdSGT_1I65eDMOIj6wZ4VxFuuT4tpyBI7wCOiZvFfxd8FUg1g/viewform?usp=header";
+        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScdzvb2SutLHUTOrkDGoQG76iYjizeIELLbvhBi4O0uEHRqzQ/viewform";
 
         // After 2 seconds, trigger navigation or redirect
         setTimeout(() => {
