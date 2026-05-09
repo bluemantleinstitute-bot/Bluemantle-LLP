@@ -342,7 +342,7 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-6">Visit Us</h3>
             <div className="w-full h-64 rounded-lg overflow-hidden border border-border mb-4">
               <iframe
-                src="https://www.google.com/maps/place/Bluemantle+LLP/@10.9471956,76.5042829,21889m/data=!3m1!1e3!4m6!3m5!1s0x3ba87f81919896d5:0x4fa2d3fd5b68778f!8m2!3d10.9623142!4d76.5116668!16s%2Fg%2F11yslv668w?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
+                src="https://maps.google.com/maps?q=Bluemantle+LLP,+Thachampara+Post,+Palakkad,+Kerala&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
