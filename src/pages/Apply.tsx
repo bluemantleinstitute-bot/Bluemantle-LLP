@@ -3,7 +3,7 @@ import ApplyLoadingOverlay from "@/components/ApplyLoadingOverlay";
 
 const Apply = () => {
   const [showFallback, setShowFallback] = useState(false);
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdSGT_1I65eDMOIj6wZ4VxFuuT4tpyBI7wCOiZvFfxd8FUg1g/viewform?usp=header";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScdzvb2SutLHUTOrkDGoQG76iYjizeIELLbvhBi4O0uEHRqzQ/viewform";
 
   useEffect(() => {
     const timer = setTimeout(() => {
