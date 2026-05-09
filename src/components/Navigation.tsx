@@ -55,7 +55,7 @@ export const Navigation = () => {
             </div>
             <GradientButton
               text="SIGN-IN"
-              href="https://learneasywinhub.netlify.app/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="scale-90"
