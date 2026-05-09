@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import DotMatrixLogo from './DotMatrixLogo';
 
 const ApplyLoadingOverlay: React.FC = () => {
     return (
@@ -43,20 +42,33 @@ const ApplyLoadingOverlay: React.FC = () => {
           0% { background-position: 0; }
           100% { background-position: 200% 0; }
         }
+
+        @keyframes subtlePulse {
+          0%, 100% { opacity: 0.85; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.02); }
+        }
       `}</style>
 
-            {/* Dot Matrix Logo Background */}
+            {/* The actual image.png as background — hue-rotated from green to cyan */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <DotMatrixLogo />
+                <img
+                    src="/image.png"
+                    alt=""
+                    className="w-full h-full object-contain"
+                    style={{
+                        filter: 'hue-rotate(140deg) saturate(1.3) brightness(0.9)',
+                        animation: 'subtlePulse 4s ease-in-out infinite',
+                    }}
+                />
             </div>
 
             {/* Dark gradient vignette — fades edges to black */}
             <div
                 className="absolute inset-0 pointer-events-none"
-                style={{ background: 'radial-gradient(ellipse at center, transparent 30%, #000 80%)' }}
+                style={{ background: 'radial-gradient(ellipse at center, transparent 25%, #000 75%)' }}
             />
 
-            {/* Progress Bar — sits above canvas */}
+            {/* Progress Bar — sits above the image */}
             <div className="relative z-10 flex flex-col items-center gap-6 mt-auto mb-16">
                 <div className="progress-div flex items-center justify-center">
                     <h2 id="h2-loading">Initializing Portal</h2>

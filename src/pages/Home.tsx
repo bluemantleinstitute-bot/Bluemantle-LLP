@@ -52,6 +52,18 @@ const Home = () => {
   {
     value: "SIMA",
     label: "Accredited by Skill India Mission"
+  }, {
+    value: "Job Support",
+    label: "Career guidance and placement help"
+  }, {
+    value: "Own Indicators",
+    label: "Custom market analysis tools"
+  }, {
+    value: "AI Tools",
+    label: "Smart trading assistance"
+  }, {
+    value: "Trading Floor",
+    label: "Live practical market access"
   }];
   const features = [{
     icon: Target,
@@ -160,7 +172,7 @@ const Home = () => {
               }} transition={{
                 delay: 0.2 + i * 0.1
               }} className="text-center lg:text-left">
-                <div className={`${stat.value.length > 12 ? "text-base sm:text-lg" : "text-2xl sm:text-3xl"} font-bold text-gradient-cyan mb-1`}>{stat.value}</div>
+                <div className="min-h-[3.25rem] text-2xl sm:text-3xl font-bold leading-tight text-gradient-cyan mb-1 break-words">{stat.value}</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>)}
             </div>
