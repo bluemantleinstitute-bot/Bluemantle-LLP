@@ -47,7 +47,7 @@ const Home = () => {
     label: "Average Rating"
   }, {
     value: "CGAC",
-    label: "Approved By Govt of India"
+    label: "Approved By Central Govt"
   },
   {
     value: "SIMA",
