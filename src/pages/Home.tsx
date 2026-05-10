@@ -53,16 +53,16 @@ const Home = () => {
     value: "SIMA",
     label: "Accredited by Skill India Mission"
   }, {
-    value: "Job Support",
-    label: "Career guidance and placement help"
+    value: "6+",
+    label: "Years of Experienced trainers"
   }, {
-    value: "Own Indicators",
-    label: "Custom market analysis tools"
+    value: "ADV",
+    label: "Advanced trading strategies"
   }, {
-    value: "AI Tools",
+    value: "AI",
     label: "Smart trading assistance"
   }, {
-    value: "Trading Floor",
+    value: "LAB",
     label: "Live practical market access"
   }];
   const features = [{
