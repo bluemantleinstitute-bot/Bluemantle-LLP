@@ -8,6 +8,7 @@ import logo from "@/assets/logo.png";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const signInUrl = "";
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -55,7 +56,7 @@ export const Navigation = () => {
             </div>
             <GradientButton
               text="SIGN-IN"
-              href="https://bluemantletechnology.com/"
+              href={signInUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="scale-90"
@@ -96,6 +97,16 @@ export const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+              <div className="pt-4">
+                <GradientButton
+                  text="SIGN-IN"
+                  href={signInUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full scale-100"
+                  onClick={() => setIsOpen(false)}
+                />
+              </div>
             </div>
           </motion.div>
         )}
