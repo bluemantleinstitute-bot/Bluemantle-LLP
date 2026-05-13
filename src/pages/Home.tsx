@@ -56,11 +56,11 @@ const Home = () => {
     value: "6+",
     label: "Years of Experienced trainers"
   }, {
-    value: "ADV",
+    value: "ATS",
     label: "Advanced trading strategies"
   }, {
-    value: "AI",
-    label: "Smart trading assistance"
+    value: "QAI",
+    label: "Quantitative trading assistance"
   }, {
     value: "LAB",
     label: "Live practical market access"
