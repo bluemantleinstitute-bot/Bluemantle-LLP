@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { TrendingUp, TrendingDown, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface MarketData {
   index: string;
@@ -22,6 +23,7 @@ const fallbackMarketData: MarketData[] = [
 ];
 
 export const MarketTicker = () => {
+  const isMobile = useIsMobile();
   const [marketData, setMarketData] = useState<MarketData[]>(fallbackMarketData);
   const [isLoading, setIsLoading] = useState(true);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
@@ -93,7 +95,7 @@ export const MarketTicker = () => {
         {/* Market Indices - Auto Scrolling */}
         <div className="relative mb-5 overflow-hidden">
           <div className="flex gap-3 animate-scroll hover:[animation-play-state:paused] cursor-pointer">
-            {[...marketData, ...marketData, ...marketData, ...marketData].map((item, index) => (
+            {(isMobile ? marketData : [...marketData, ...marketData, ...marketData, ...marketData]).map((item, index) => (
               <motion.div
                 key={`${item.index}-${index}`}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -130,7 +132,7 @@ export const MarketTicker = () => {
         </div>
 
         {/* News Ticker */}
-        <div className="relative overflow-hidden rounded-xl bg-muted/20 border border-border/20 py-2.5">
+        <div className="hidden md:block relative overflow-hidden rounded-xl bg-muted/20 border border-border/20 py-2.5">
           <div className="flex gap-12 animate-scroll">
             {[...marketNews, ...marketNews, ...marketNews].map((news, index) => (
               <div key={index} className="flex items-center gap-3 text-xs text-muted-foreground font-medium whitespace-nowrap">

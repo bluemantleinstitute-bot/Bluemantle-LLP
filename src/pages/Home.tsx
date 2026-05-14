@@ -110,17 +110,17 @@ const Home = () => {
       canonical="https://bluemantletechnology.com/"
     />
     {/* Hero Section */}
-    <section className="relative min-h-screen pb-40 lg:pb-0 flex items-center overflow-hidden">
+    <section className="relative min-h-[100svh] overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-32 lg:pb-24">
       {/* Animated background gradient - More vibrant but still transparent to show candlesticks */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy/40 via-navy-dark/50 to-navy/40 gradient-animated opacity-50" />
 
       {/* Matte 3D Stage Hero Identity - Desktop only (Absolute) */}
-      <div className="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 w-1/2 items-center justify-center pointer-events-none z-0 overflow-visible">
+      <div className="hidden xl:flex absolute right-0 top-1/2 -translate-y-1/2 w-1/2 items-center justify-center pointer-events-none z-0 overflow-visible">
         <Matte3DStage />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 sm:pt-0">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl xl:max-w-4xl">
           <motion.div initial={{
             opacity: 0,
             y: 30
@@ -154,15 +154,8 @@ const Home = () => {
               />
             </div>
 
-            {/* Mobile-only 3D Coin (Flow-based to prevent overlap) */}
-            <div className="lg:hidden w-full flex justify-center mb-12 pointer-events-none overflow-visible">
-              <div className="scale-110 sm:scale-125">
-                <Matte3DStage />
-              </div>
-            </div>
-
             {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-7 sm:gap-6">
               {stats.map((stat, i) => <motion.div key={i} initial={{
                 opacity: 0,
                 y: 20
@@ -172,7 +165,7 @@ const Home = () => {
               }} transition={{
                 delay: 0.2 + i * 0.1
               }} className="text-center lg:text-left">
-                <div className="min-h-[3.25rem] text-2xl sm:text-3xl font-bold leading-tight text-gradient-cyan mb-1 break-words">{stat.value}</div>
+                <div className="min-h-[2.5rem] sm:min-h-[3.25rem] text-2xl sm:text-3xl font-bold leading-tight text-gradient-cyan mb-1 break-words">{stat.value}</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>)}
             </div>
@@ -181,11 +174,11 @@ const Home = () => {
       </div>
 
       {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple/20 rounded-full blur-3xl animate-glow-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-glow-pulse" style={{
+      <div className="hidden lg:block absolute top-1/4 left-1/4 w-96 h-96 bg-purple/20 rounded-full blur-3xl animate-glow-pulse" />
+      <div className="hidden lg:block absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-glow-pulse" style={{
         animationDelay: "1s"
       }} />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-glow-pulse" style={{
+      <div className="hidden lg:block absolute top-1/2 right-1/3 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-glow-pulse" style={{
         animationDelay: "2s"
       }} />
     </section>

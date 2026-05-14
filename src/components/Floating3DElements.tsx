@@ -11,7 +11,7 @@ export const Floating3DElements = () => {
   ];
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
       {elements.map((elem, i) => (
         <motion.div
           key={i}
