@@ -8,7 +8,7 @@ import logo from "@/assets/logo.png";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const signInUrl = "";
+  const signInUrl = "https://bmit-5od1.vercel.app";
 
   const navItems = [
     { path: "/", label: "Home" },
