@@ -312,7 +312,9 @@ const Courses = () => {
                   />
                   <GradientButton
                     text={course.title.includes("NISM") ? "Get Expert Guidance" : "Join a Trial Session"}
-                    href={course.title.includes("NISM") ? "tel:+917034540404" : undefined}
+                    href={course.title.includes("NISM") ? "tel:+917034540404" : "https://bmit-demo.vercel.app/"}
+                    target={course.title.includes("NISM") ? undefined : "_blank"}
+                    rel={course.title.includes("NISM") ? undefined : "noopener noreferrer"}
                     className="scale-90"
                   />
                   {!course.title.includes("NISM") && (
