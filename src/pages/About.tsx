@@ -29,7 +29,7 @@ const About = () => {
     linkedin: "https://www.linkedin.com/in/vyshakh-g-varma-9570b7217?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADanX5MBKZmriayO6X1NNt12bz2OdJVwep8&lipi=urn%3Ali%3Apage%3Acompanies_company_people_index%3B35672677-7c87-4726-b3b7-f8bc156e5cf1"
   }, {
     name: "AJAL BENNY",
-    role: "MARKET RESEARCH ANALYST/ MENTOR",
+    role: "HEAD OF OPERATIONS",
     bio: "Market Research Analyst and Mentor specializing in high-conviction insights, data-driven trend analysis, and strategic opportunity identification across financial markets.",
     image: "/4.jpeg",
     imageScale: 1.20,           // ← change this number to zoom in/out
