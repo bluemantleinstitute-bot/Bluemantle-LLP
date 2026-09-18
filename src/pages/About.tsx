@@ -19,6 +19,14 @@ const About = () => {
     imageScale: .8,           // ← change this number to zoom in/out
     imagePosition: "center top", // ← change to reposition (e.g. '50% 30%')
     linkedin: "https://www.linkedin.com/in/prasanthphilip?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAAkRL2YBZQeU35ywE0b5Oxcw4_wzkOu9v50&lipi=urn%3Ali%3Apage%3Acompanies_company_people_index%3B35672677-7c87-4726-b3b7-f8bc156e5cf1"
+  },{
+    name: "SONIYA PRASANTH",
+    role: "DIRECTOR",
+    bio: "Oversees Daily Operations and Ensures Smooth, Efficient Management",
+    image: "/2.jpeg",
+    imageScale: 1.20,           // ← change this number to zoom in/out
+    imagePosition: "center top", // ← change to reposition
+    linkedin: "https://www.linkedin.com"
   }, {
     name: "VYSHAKH G",
     role: "HEAD OF DERIVATIVES AND TECHNICAL RESEARCH",
