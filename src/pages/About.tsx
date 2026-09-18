@@ -23,7 +23,7 @@ const About = () => {
     name: "SONIYA PRASANTH",
     role: "DIRECTOR",
     bio: "Oversees Daily Operations and Ensures Smooth, Efficient Management",
-    image: "/2.jpeg",
+    image: "/2.png",
     imageScale: 1.20,           // ← change this number to zoom in/out
     imagePosition: "center top", // ← change to reposition
     linkedin: "https://www.linkedin.com"
