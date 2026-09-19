@@ -38,7 +38,7 @@ const About = () => {
   }, {
     name: "AJAL BENNY",
     role: "HEAD OF OPERATIONS",
-    bio: "Market Research Analyst and Mentor specializing in high-conviction insights, data-driven trend analysis, and strategic opportunity identification across financial markets.",
+    bio: "Leading day-to-day operations, team coordination, and process management to drive organizational efficiency and growth.",
     image: "/4.jpeg",
     imageScale: 1.20,           // ← change this number to zoom in/out
     imagePosition: "center top", // ← change to reposition
