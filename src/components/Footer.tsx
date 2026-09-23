@@ -79,7 +79,7 @@ export const Footer = () => {
             </li>
             <li className="flex items-start gap-2 text-sm text-muted-foreground">
               <MapPin size={16} className="mt-0.5 text-secondary flex-shrink-0" />
-              <p>Ivy Biophilic Workspace, Thachampara Post, Palakkad, Kerala – 678593</p>
+              <p>Ivy Biophilic Workspace, Thachampara Post, Palakkad, Kerala – 678593 LAND-PHONE: +9149 2424 4022</p>
             </li>
           </ul>
         </div>
