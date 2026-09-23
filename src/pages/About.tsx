@@ -294,7 +294,8 @@ const About = () => {
                 <div>
                   <p className="font-semibold mb-1">Phone</p>
                   <a href="tel:+917034540404" className="text-muted-foreground hover:text-secondary transition-colors block">+91 70345 40404</a>
-                  <a href="tel:+914924244022" className="text-muted-foreground hover:text-secondary transition-colors block">+91 4924 244022</a>
+                  <a href="tel:+917034840404" className="text-muted-foreground hover:text-secondary transition-colors block">+91 7034840404</a>
+                  <a href="tel:+917034740404" className="text-muted-foreground hover:text-secondary transition-colors block">+91 7034740404</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
